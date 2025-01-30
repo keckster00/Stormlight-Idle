@@ -67,11 +67,24 @@
             <div class="bar" id="honor-button"></div>
             <div class="barText">Volunteer in town</div>
           </div>
+          <div
+            class="progressContainer"
+            id="stormlightBar"
+            style="display: none"
+            onclick="progressClick('stormlight-button', 'stormlightCount')"
+          >
+            <div class="progressBar"></div>
+            <div class="bar" id="stormlight-button"></div>
+            <div class="barText">Talk to spren</div>
+          </div>
         </div>
         <div class="right">
           <div class="attributes">
             <h3>Attributes</h3>
-            <h5>?????? 0</h5>
+            <h5>
+              <span class="stormlightText">???????</span>
+              <span class="stormlightCount">0</span>
+            </h5>
             <h5>Speed: <span class="speedCount">0</span></h5>
             <h5>Agility: <span class="agilityCount">0</span></h5>
             <h5>Strength: <span class="strengthCount">0</span></h5>

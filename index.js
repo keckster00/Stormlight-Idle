@@ -45,6 +45,12 @@ function updateCount(attr) {
     {
         window.alert("scholar")
     }
+    else if(attr == 'honorCount' && elem.innerHTML == 5)
+    {
+        window.alert("You've been chosen by a spren!");
+        document.querySelector('.stormlightText').innerHTML = 'Stormlight:';
+        document.getElementById('stormlightBar').style.display = '';
+    }
 }
 
 
