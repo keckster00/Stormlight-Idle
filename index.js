@@ -9,8 +9,9 @@ var _HONORCOUNT;
 var _STORMLIGHTCOUNT
 
 
-var i = 0;
+
 function progressClick(element, attribute) {
+    var i = 0;
     if (i == 0)
     {
         i = 1;
@@ -35,6 +36,7 @@ function progressClick(element, attribute) {
 }
 
 function recursiveProgress(element, attribute) {
+    var i = 0;
     if (i == 0)
         {
             i = 1;
