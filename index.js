@@ -1,6 +1,15 @@
+//VARIABLES
+var speedCount = document.querySelector('.speedCount')
+var agilityCount = 0;
+var strengthCount = 0;
+var gritCount = 0;
+var intelligenceCount = 0;
+var skillCount = 0;
+var honorCount = 0;
+
 
 var i = 0;
-function progressClick(element) {
+function progressClick(element, attribute) {
     if (i == 0)
     {
         i = 1;
@@ -14,6 +23,7 @@ function progressClick(element) {
                 clearInterval(id);
                 i = 0;
                 elem.style.width = 0 + '%'
+                updateCount(attribute)
             } else
             {
                 width++;
@@ -23,6 +33,19 @@ function progressClick(element) {
     }
 }
 
+function updateCount(attr) {
+    var elem = document.querySelector('.' + attr);
+    elem.innerHTML = parseFloat(elem.innerHTML) + 1;
+
+    if(attr == 'strengthCount' && elem.innerHTML == 5)
+    {
+        window.confirm("soldier?");
+    }
+    else if(attr == 'intelligenceCount' && elem.innerHTML == 5)
+    {
+        window.alert("scholar")
+    }
+}
 
 
 //when to unlock progression?
