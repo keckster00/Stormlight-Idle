@@ -5,11 +5,19 @@ body {
     margin: 0;
     padding: 0;
     user-select: none;
+
+    border-color:red;
+    border-style: solid;
+    border-width: 2px;
 }
 
 .main {
     display: flex;
     gap: 200px;
+
+    border-color:blue;
+    border-style: solid;
+    border-width: 2px;
 }
 
 .title {
@@ -20,6 +28,10 @@ body {
 .activity {
     display: grid;
     width: 500px;
+
+    border-color:green;
+    border-style: solid;
+    border-width: 2px;
 }
 
 .progressContainer {
@@ -54,6 +66,25 @@ body {
     line-height: 36px;
     margin-left: 5px;
     z-index: 1;
+}
+
+.upgrades {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 10px;
+
+    border-color: purple;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.upgradeItem {
+    border-color: aqua;
+    border-style: solid;
+    border-width: 2px;
+    margin: 2px;
 }
 
 

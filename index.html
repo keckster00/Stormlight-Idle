@@ -11,6 +11,7 @@
       <h1 class="title">Stormlight Idle</h1>
       <div class="main">
         <div class="activity">
+          <!--STARTUP PROGRESS-->
           <div
             class="progressContainer"
             onclick="progressClick('speed-button', 'speedCount')"
@@ -67,6 +68,7 @@
             <div class="bar" id="honor-button"></div>
             <div class="barText">Volunteer in town</div>
           </div>
+          <!--STORMLIGHT BUTTON-->
           <div
             class="progressContainer"
             id="stormlightBar"
@@ -97,6 +99,17 @@
             <h3>Story</h3>
           </div>
         </div>
+      </div>
+      <div class="upgrades">
+        <div class="upgradeItem" id="upgrade1" onclick="upgrade('upgrade1')">
+          upgrade 1
+        </div>
+        <div class="upgradeItem" id="upgrade2" onclick="upgrade('upgrade2')">
+          upgrade 2
+        </div>
+        <div class="upgradeItem">upgrade 3</div>
+        <div class="upgradeItem">upgrade 4</div>
+        <div class="upgradeItem">upgrade 5</div>
       </div>
     </section>
     <script src="index.js"></script>
