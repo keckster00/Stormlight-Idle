@@ -120,6 +120,7 @@ function upgrade(clicked) {
     {
         recursiveProgress('agility-button', 'agilityCount');
     }
+    document.getElementById(clicked).style.display = 'none';
 }
 
 
@@ -127,3 +128,10 @@ function upgrade(clicked) {
 //secondary tab that appears at unlock condition???
     //if intelligence gets to a certain level -- scholar choice
     //if skill gets to a certain level -- soldier choice
+
+/*
+TO DO
+- need to add new buttons for or change the existing ones when a path has been chosen
+- need to add a speed parameter to the progress bar
+- work on upgrades
+*/
