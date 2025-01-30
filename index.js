@@ -11,6 +11,7 @@ var _STORMLIGHTCOUNT
 
 
 function progressClick(element, attribute) {
+    document.getElementById(element).style.pointerEvents = 'none';
     var i = 0;
     if (i == 0)
     {
@@ -26,6 +27,7 @@ function progressClick(element, attribute) {
                 i = 0;
                 elem.style.width = 0 + '%'
                 updateCount(attribute)
+                elem.style.pointerEvents = '';
             } else
             {
                 width++;
