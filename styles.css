@@ -1,40 +1,59 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    user-select: none;
 }
 
-#game-container {
+.main {
+    display: flex;
+    gap: 200px;
+}
+
+.title {
     text-align: center;
-    margin-top: 50px;
+    padding: 20px;
 }
 
-#click-button, #run-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+.activity {
+    display: grid;
+    width: 500px;
 }
 
-#click-button:hover {
-    background-color: #45a049;
+.progressContainer {
+    position: relative;
+    margin: 2px;
 }
 
-/* Styles for progress bar container */
-#progress-bar-container {
-    width: 200px;
-    height: 20px;
-    background-color: #ddd;
-    margin: 20px auto;
+.progressBar {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    background-color: grey;
+    text-align: left;
+    line-height: 36px;
+    color: black;
+    width: 100%; 
+    height: 36px;
+    position: absolute;
+    z-index: 0;
 }
 
-/* Styles for progress bar */
-#progress-bar {
+.bar {
     width: 0%;
-    height: 100%;
-    background-color: #4CAF50;
-    transition: width 5s linear;
+    height: 36px;
+    background-color: green;
+    position: absolute;
+    z-index: 0;
 }
+
+.barText {
+    position:absolute;
+    line-height: 36px;
+    margin-left: 5px;
+    z-index: 1;
+}
+
+

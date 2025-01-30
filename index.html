@@ -1,24 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stormlight Idle</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div id="game-container">
-        <h1>Stormlight Idle</h1>
-        <button id="click-button">Click Me!</button>
-        <br/><br/>
-        <button id="run-button">Go on Bridge Run</button>"
-        <div id="progress-bar-container">
-            <div id="progress-bar"></div>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section>
+      <h1 class="title">Stormlight Idle</h1>
+      <div class="main">
+        <div class="activity">
+          <div
+            class="progressContainer"
+            onclick="progressClick('speed-button')"
+          >
+            <div class="progressBar"></div>
+            <div class="bar" id="speed-button"></div>
+            <div class="barText">Go for a run</div>
+          </div>
+          <div
+            class="progressContainer"
+            onclick="progressClick('agility-button')"
+          >
+            <div class="progressBar"></div>
+            <div class="bar" id="agility-button"></div>
+            <div class="barText">Climb some trees</div>
+          </div>
+          <div
+            class="progressContainer"
+            onclick="progressClick('strength-button')"
+          >
+            <div class="progressBar"></div>
+            <div class="bar" id="strength-button"></div>
+            <div class="barText">Chop some firewood</div>
+          </div>
+          <div class="progressContainer" onclick="progressClick('grit-button')">
+            <div class="progressBar"></div>
+            <div class="bar" id="grit-button"></div>
+            <div class="barText">Help with farmwork</div>
+          </div>
+          <div class="progressContainer" onclick="progressClick('int-button')">
+            <div class="progressBar"></div>
+            <div class="bar" id="int-button"></div>
+            <div class="barText">Read a book</div>
+          </div>
+          <div
+            class="progressContainer"
+            onclick="progressClick('skill-button')"
+          >
+            <div class="progressBar"></div>
+            <div class="bar" id="skill-button"></div>
+            <div class="barText">Play swordfighting</div>
+          </div>
+          <div
+            class="progressContainer"
+            onclick="progressClick('honor-button')"
+          >
+            <div class="progressBar"></div>
+            <div class="bar" id="honor-button"></div>
+            <div class="barText">Climb some trees</div>
+          </div>
         </div>
-        <p id="click-count">Clicks: 0</p>
-        <p id="runs-count">Runs: 0</p>"
-    </div>
-
+        <div class="right">
+          <div class="attributes">
+            <h3>Attributes</h3>
+            <h5>?????? 0</h5>
+            <h5>Speed: <span class="speedCount">0</span></h5>
+            <h5>Agility: <span class="agilityCount">0</span></h5>
+            <h5>Strength: <span class="strengthCount">0</span></h5>
+            <h5>Grit: <span class="gritCount">0</span></h5>
+            <h5>Intelligence: <span class="intelligenceCount">0</span></h5>
+            <h5>Skill: <span class="skillCount">0</span></h5>
+            <h5>Honor: <span class="honorCount">0</span></h5>
+          </div>
+          <div class="story">
+            <h3>Story</h3>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

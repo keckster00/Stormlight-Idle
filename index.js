@@ -1,36 +1,31 @@
-var _a, _b;
-// Define variables
-var clicks = 0;
-var runs = 0;
-var isProgressBarActive = false;
-// Function to handle click event
-function handleClick() {
-    clicks++;
-    var clickCountElement = document.getElementById('click-count');
-    if (clickCountElement) {
-        clickCountElement.innerText = 'Clicks: ' + clicks;
+
+var i = 0;
+function progressClick(element) {
+    if (i == 0)
+    {
+        i = 1;
+        var elem = document.getElementById(element);
+        var width = 1;
+        var id = setInterval(frame, 10);
+        function frame()
+        {
+            if (width >= 100)
+            {
+                clearInterval(id);
+                i = 0;
+                elem.style.width = 0 + '%'
+            } else
+            {
+                width++;
+                elem.style.width = width + '%';
+            }
+        }
     }
 }
-function runBridgeRun() {
-    //create button, progress bar, stats
-    //increment stats by fixed amount on completion
-    if (!isProgressBarActive) {
-        runs++;
-        document.getElementById('runs-count').innerText = 'Runs ' + runs;
-        startProgressBar();
-    }
-}
-// Function to start the progress bar
-function startProgressBar() {
-    isProgressBarActive = true;
-    var progressBar = document.getElementById('progress-bar');
-    progressBar.style.width = '100%';
-    // After 5 seconds, reset progress bar and allow clicking again
-    setTimeout(function () {
-        progressBar.style.width = '0%';
-        isProgressBarActive = false;
-    }, 5000);
-}
-// Add event listener to the click button
-(_a = document.getElementById('click-button')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', handleClick);
-(_b = document.getElementById('run-button')) === null || _b === void 0 ? void 0 : _b.addEventListener('click', runBridgeRun);
+
+
+
+//when to unlock progression?
+//secondary tab that appears at unlock condition???
+    //if intelligence gets to a certain level -- scholar choice
+    //if skill gets to a certain level -- soldier choice
