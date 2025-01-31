@@ -15,7 +15,7 @@
           <div
             class="progressContainer"
             id="speedContainer"
-            onclick="progressClick('speed-button', 'speedCount')"
+            onclick="progressClick('speed-button', 'speedCount', 1)"
           >
             <div class="progressBar"></div>
             <div class="bar" id="speed-button"></div>
@@ -24,7 +24,7 @@
           <div
             class="progressContainer"
             id="agilityContainer"
-            onclick="progressClick('agility-button', 'agilityCount')"
+            onclick="progressClick('agility-button', 'agilityCount', 1)"
           >
             <div class="progressBar"></div>
             <div class="bar" id="agility-button"></div>
@@ -32,7 +32,8 @@
           </div>
           <div
             class="progressContainer"
-            onclick="progressClick('strength-button', 'strengthCount')"
+            id="strengthContainer"
+            onclick="progressClick('strength-button', 'strengthCount', 1)"
           >
             <div class="progressBar"></div>
             <div class="bar" id="strength-button"></div>
@@ -40,7 +41,8 @@
           </div>
           <div
             class="progressContainer"
-            onclick="progressClick('grit-button', 'gritCount')"
+            id="gritContainer"
+            onclick="progressClick('grit-button', 'gritCount', 1)"
           >
             <div class="progressBar"></div>
             <div class="bar" id="grit-button"></div>
@@ -48,7 +50,8 @@
           </div>
           <div
             class="progressContainer"
-            onclick="progressClick('int-button', 'intelligenceCount')"
+            id="intelligenceContainer"
+            onclick="progressClick('int-button', 'intelligenceCount', 1)"
           >
             <div class="progressBar"></div>
             <div class="bar" id="int-button"></div>
@@ -56,7 +59,8 @@
           </div>
           <div
             class="progressContainer"
-            onclick="progressClick('skill-button', 'skillCount')"
+            id="skillContainer"
+            onclick="progressClick('skill-button', 'skillCount', 1)"
           >
             <div class="progressBar"></div>
             <div class="bar" id="skill-button"></div>
@@ -64,18 +68,90 @@
           </div>
           <div
             class="progressContainer"
-            onclick="progressClick('honor-button', 'honorCount')"
+            id="honorContainer"
+            onclick="progressClick('honor-button', 'honorCount', 1)"
           >
             <div class="progressBar"></div>
             <div class="bar" id="honor-button"></div>
             <div class="barText">Volunteer in town</div>
+          </div>
+          <!-- SOLDIER PROGRESS BARS -->
+          <div
+            class="progressContainer"
+            id="speedContainer-Soldier"
+            style="display: none"
+            onclick="progressClick('speed-button-soldier', 'speedCount', 3)"
+          >
+            <div class="progressBar"></div>
+            <div class="bar" id="speed-button-soldier"></div>
+            <div class="barText">Marching drills</div>
+          </div>
+          <div
+            class="progressContainer"
+            id="agilityContainer-Soldier"
+            style="display: none"
+            onclick="progressClick('agility-button', 'agilityCount', 3)"
+          >
+            <div class="progressBar"></div>
+            <div class="bar" id="agility-button"></div>
+            <div class="barText">Run the obstacle course</div>
+          </div>
+          <div
+            class="progressContainer"
+            id="strengthContainer-Soldier"
+            style="display: none"
+            onclick="progressClick('strength-button', 'strengthCount', 3)"
+          >
+            <div class="progressBar"></div>
+            <div class="bar" id="strength-button"></div>
+            <div class="barText">Lift some logs</div>
+          </div>
+          <div
+            class="progressContainer"
+            id="gritContainer-Soldier"
+            style="display: none"
+            onclick="progressClick('grit-button', 'gritCount', 3)"
+          >
+            <div class="progressBar"></div>
+            <div class="bar" id="grit-button"></div>
+            <div class="barText">Battlefield mission</div>
+          </div>
+          <div
+            class="progressContainer"
+            id="intelligenceContainer-Soldier"
+            style="display: none"
+            onclick="progressClick('int-button', 'intelligenceCount', 3)"
+          >
+            <div class="progressBar"></div>
+            <div class="bar" id="int-button"></div>
+            <div class="barText">Study strategy</div>
+          </div>
+          <div
+            class="progressContainer"
+            id="skillContainer-Soldier"
+            style="display: none"
+            onclick="progressClick('skill-button', 'skillCount', 3)"
+          >
+            <div class="progressBar"></div>
+            <div class="bar" id="skill-button"></div>
+            <div class="barText">Train with your weapon</div>
+          </div>
+          <div
+            class="progressContainer"
+            id="honorContainer-Soldier"
+            style="display: none"
+            onclick="progressClick('honor-button', 'honorCount', 3)"
+          >
+            <div class="progressBar"></div>
+            <div class="bar" id="honor-button"></div>
+            <div class="barText">Help a commrade</div>
           </div>
           <!--STORMLIGHT BUTTON-->
           <div
             class="progressContainer"
             id="stormlightBar"
             style="display: none"
-            onclick="progressClick('stormlight-button', 'stormlightCount')"
+            onclick="progressClick('stormlight-button', 'stormlightCount', 1)"
           >
             <div class="progressBar"></div>
             <div class="bar" id="stormlight-button"></div>

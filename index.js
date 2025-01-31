@@ -10,9 +10,7 @@ var _STORMLIGHTCOUNT
 
 
 var i = 0;
-function progressClick(element, attribute) {
-    document.getElementById(element).style.pointerEvents = 'none';
-
+function progressClick(element, attribute, value) {
     if (i == 0)
     {
         i = 1;
@@ -26,7 +24,7 @@ function progressClick(element, attribute) {
                 clearInterval(id);
                 i = 0;
                 elem.style.width = 0 + '%'
-                updateCount(attribute)
+                updateCount(attribute, value)
                 elem.style.pointerEvents = '';
             } else
             {
@@ -63,9 +61,9 @@ function recursiveProgress(element, attribute) {
         }
 }
 
-function updateCount(attr) {
+function updateCount(attr, value) {
     var elem = document.querySelector('.' + attr);
-    elem.innerHTML = parseFloat(elem.innerHTML) + 1;
+    elem.innerHTML = parseFloat(elem.innerHTML) + value;
     switch(attr)
     {
         case 'speedCount':
@@ -98,7 +96,7 @@ function updateCount(attr) {
     {
         if(window.confirm("You've been selected to become a soldier? Will you go? (this choice has consequences and cannot be changed."))
         {
-            //replace buttons for soldier
+            showSoldier();
         } 
     }
     else if(attr == 'intelligenceCount' && elem.innerHTML == 5)
@@ -124,6 +122,9 @@ function upgrade(clicked) {
         recursiveProgress('agility-button', 'agilityCount');
         upgradeBought(clicked, 'agilityContainer');
     }
+    else {
+        alert("not enough resources");
+    }
     //document.getElementById(clicked).style.display = 'none';
 }
 
@@ -131,6 +132,27 @@ function upgradeBought(clicked, container)
 {
     document.getElementById(clicked).style.display = 'none';
     document.getElementById(container).onclick='';
+}
+
+function showSoldier() {
+    //Hide base progress bars
+    document.getElementById('speedContainer').style.display = 'none';
+    document.getElementById('agilityContainer').style.display = 'none';
+    document.getElementById('strengthContainer').style.display = 'none';
+    document.getElementById('gritContainer').style.display = 'none';
+    document.getElementById('intelligenceContainer').style.display = 'none';
+    document.getElementById('skillContainer').style.display = 'none';
+    document.getElementById('honorContainer').style.display = 'none';
+
+    //Show soldier progress bars
+    document.getElementById('speedContainer-Soldier').style.display = '';
+    document.getElementById('agilityContainer-Soldier').style.display = '';
+    document.getElementById('strengthContainer-Soldier').style.display = '';
+    document.getElementById('gritContainer-Soldier').style.display = '';
+    document.getElementById('intelligenceContainer-Soldier').style.display = '';
+    document.getElementById('skillContainer-Soldier').style.display = '';
+    document.getElementById('honorContainer-Soldier').style.display = '';
+    
 }
 
 
