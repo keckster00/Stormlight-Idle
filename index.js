@@ -9,10 +9,10 @@ var _HONORCOUNT;
 var _STORMLIGHTCOUNT
 
 
-
+var i = 0;
 function progressClick(element, attribute) {
     document.getElementById(element).style.pointerEvents = 'none';
-    var i = 0;
+
     if (i == 0)
     {
         i = 1;
@@ -38,10 +38,10 @@ function progressClick(element, attribute) {
 }
 
 function recursiveProgress(element, attribute) {
-    var i = 0;
-    if (i == 0)
+    var j = 0;
+    if (j == 0)
         {
-            i = 1;
+            j = 1;
             var elem = document.getElementById(element);
             var width = 1;
             var id = setInterval(frame, 10);
@@ -50,7 +50,7 @@ function recursiveProgress(element, attribute) {
                 if (width >= 100)
                 {
                     clearInterval(id);
-                    i = 0;
+                    j = 0;
                     elem.style.width = 0 + '%'
                     updateCount(attribute)
                     recursiveProgress(element, attribute);
@@ -114,15 +114,23 @@ function updateCount(attr) {
 }
 
 function upgrade(clicked) {
-    if(clicked == 'upgrade1')
+    if(clicked == 'upgrade1' && _SPEEDCOUNT >= 10)
     {
         recursiveProgress('speed-button', 'speedCount');
+        upgradeBought(clicked, 'speedContainer');
     }
-    else if(clicked == 'upgrade2')
+    else if(clicked == 'upgrade2' && _AGILITYCOUNT >= 10)
     {
         recursiveProgress('agility-button', 'agilityCount');
+        upgradeBought(clicked, 'agilityContainer');
     }
+    //document.getElementById(clicked).style.display = 'none';
+}
+
+function upgradeBought(clicked, container)
+{
     document.getElementById(clicked).style.display = 'none';
+    document.getElementById(container).onclick='';
 }
 
 
