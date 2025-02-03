@@ -35,7 +35,7 @@ function progressClick(element, attribute, value) {
     }
 }
 
-function recursiveProgress(element, attribute) {
+function recursiveProgress(element, attribute, value) {
     var j = 0;
     if (j == 0)
         {
@@ -50,8 +50,8 @@ function recursiveProgress(element, attribute) {
                     clearInterval(id);
                     j = 0;
                     elem.style.width = 0 + '%'
-                    updateCount(attribute)
-                    recursiveProgress(element, attribute);
+                    updateCount(attribute, value)
+                    recursiveProgress(element, attribute, value);
                 } else
                 {
                     width++;
@@ -114,7 +114,7 @@ function updateCount(attr, value) {
 function upgrade(clicked) {
     if(clicked == 'upgrade1' && _SPEEDCOUNT >= 10)
     {
-        recursiveProgress('speed-button', 'speedCount');
+        recursiveProgress('speed-button', 'speedCount', 1);
         upgradeBought(clicked, 'speedContainer');
     }
     else if(clicked == 'upgrade2' && _AGILITYCOUNT >= 10)
